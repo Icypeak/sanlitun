@@ -1,0 +1,496 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html, .wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: url(./images/bg.jpg) 0 0 no-repeat;
+    background-size: 100% 100%;
+}
+
+/*loading*/
+.loading {
+    width: 110px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-left: -55px;
+    text-align: center;
+}
+
+.loading .inner {
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    margin-top: 12px;
+    background-color: #fff;
+    border: 1px solid #ed1b24;
+}
+
+.loading img {
+    display: block;
+    width: 80px;
+    margin: 30px auto;
+}
+
+.loading-progress {
+    width: 0;
+    height: 2px;
+    overflow: hidden;
+    background-color: #ed1b24;
+    text-align: center;
+    -webkit-transition: width .3s ease;
+    transition: width .3s ease;
+}
+
+.loading-num {
+    height: 20px;
+    font: 12px/20px Tahoma;
+    color: #ed1b24;
+}
+
+/*animate*/
+/*渐现*/
+@-webkit-keyframes fadeZoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+    }
+}
+
+@-webkit-keyframes fadeZoomOut {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(1.5);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+    }
+}
+
+@-webkit-keyframes fadeRotateIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotate(-360deg);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+@-webkit-keyframes fadeLeftIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(100px)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+@-webkit-keyframes fadeRightIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-100px)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+    }
+}
+
+/*从上向下出现*/
+@-webkit-keyframes fadeDownIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-40px)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0)
+    }
+}
+
+@-webkit-keyframes fadeUpIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(40px)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0)
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.wrap {
+    position: relative;
+}
+
+.wrap .img {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: contain;
+    opacity: 0;
+}
+
+.hua {
+    width: 120%;
+    height: 40%;
+    left: -10%;
+    top: -25%;
+    background-image: url(./images/hua.png);
+    z-index: 10;
+}
+
+@-webkit-keyframes hua {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-100px) translateY(0) scale(1.05)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0) translateY(-10px) scale(1)
+    }
+}
+
+.animate .hua {
+    -webkit-animation: hua 1s ease both;
+}
+
+.deng1, .deng2 {
+    width: 45%;
+    height: 30%;
+    left: -5%;
+    top: 5%;
+    background-image: url(./images/deng.png);
+}
+
+.animate .deng1 {
+    -webkit-animation: hua 1.1s .2s ease both;
+}
+
+.animate .deng2 {
+    -webkit-animation: hua 1.2s ease both;
+}
+
+.deng2 {
+    width: 25%;
+    left: 20%;
+    top: -2%;
+}
+
+.logo {
+    width: 30%;
+    height: 10%;
+    background-image: url(./images/logo.png);
+    background-position: right top;
+    right: 2%;
+    top: 3%;
+}
+
+.animate .logo {
+    -webkit-animation: fadeIn 1s 1s ease both;
+}
+
+.font {
+    width: 90%;
+    position: relative;
+    height: 36%;
+    margin: 45% 5% 5%;
+    overflow: hidden;
+}
+
+.font .img {
+    width: 12.5%;
+    position: relative;
+    float: left;
+    height: 100%;
+    background-position: center bottom;
+    background-size: auto 87%;
+}
+
+.font .img .top {
+    width: 100%;
+    height: 13%;
+    display: block;
+    background-position: center bottom;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+
+.font .font1 {
+    background-image: url(./images/p_26.png);
+}
+
+.font .font1 .top {
+    background-image: url(./images/7.png);
+}
+
+.font .font2 {
+    background-image: url(./images/p_25.png);
+}
+
+.font .font2 .top {
+    background-image: url(./images/6.png);
+}
+
+.font .font3 {
+    background-image: url(./images/p_24.png);
+}
+
+.font .font3 .top {
+    background-image: url(./images/5.png);
+}
+
+.font .font4 {
+    background-image: url(./images/p_23.png);
+}
+
+.font .font4 .top {
+    background-image: url(./images/4.png);
+}
+
+.font .font5 {
+    background-image: url(./images/p_22.png);
+}
+
+.font .font5 .top {
+    background-image: url(./images/3.png);
+}
+
+.font .font6 {
+    background-image: url(./images/p_21.png);
+}
+
+.font .font6 .top {
+    background-image: url(./images/2.png);
+}
+
+.font .font7 {
+    background-image: url(./images/p_20.png);
+}
+
+.font .font7 .top {
+    background-image: url(./images/1.png);
+}
+
+.font .font8 {
+    background-image: url(./images/p_27.png);
+}
+
+.font .font8 .top {
+    background-image: url(./images/8.png);
+}
+
+.animate .font .font1 {
+    -webkit-animation: fadeIn 1s 2s linear both;
+}
+
+.animate .font .font2 {
+    -webkit-animation: fadeIn 1s 3s linear both;
+}
+
+.animate .font .font3 {
+    -webkit-animation: fadeIn 1s 4s linear both;
+}
+
+.animate .font .font4 {
+    -webkit-animation: fadeIn 1s 5s linear both;
+}
+
+.animate .font .font5 {
+    -webkit-animation: fadeIn 1s 6s linear both;
+}
+
+.animate .font .font6 {
+    -webkit-animation: fadeIn 1s 7s linear both;
+}
+
+.animate .font .font7 {
+    -webkit-animation: fadeIn 1s 8s linear both;
+}
+
+.animate .font .font8 {
+    -webkit-animation: fadeIn 1s 9s linear both;
+}
+
+@-webkit-keyframes fadeRotate3DIn {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+    }
+}
+
+.animate .font .font1 .top {
+    -webkit-animation: fadeRotate3DIn 1.5s 11s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+.animate .font .font2 .top {
+    -webkit-animation: fadeRotate3DIn 1.5s 11.1s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+.animate .font .font3 .top {
+    -webkit-animation: fadeRotate3DIn 1.5s 11.2s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+.animate .font .font4 .top {
+    -webkit-animation: fadeRotate3DIn 1.5s 11.3s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+.animate .font .font5 .top {
+    -webkit-animation: fadeRotate3DIn 1.5s 11.4s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+.animate .font .font1 .top {
+    -webkit-animation: fadeRotate3DIn 1.5s 11.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+.animate .font .font6 .top {
+    -webkit-animation: fadeRotate3DIn 1.5s 11.6s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+.animate .font .font7 .top {
+    -webkit-animation: fadeRotate3DIn 1.5s 11.7s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+.animate .font .font8 .top {
+    -webkit-animation: fadeRotate3DIn 1.5s 11.8s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
+}
+
+.name {
+    position: relative;
+    width: 50%;
+    margin-left: 40%;
+	margin-top:30px;
+    overflow: hidden;
+    text-align: center;
+    height: 11%;
+}
+
+.name .img {
+    position: relative;
+    width: 30%;
+    display: inline-block;
+    height: 50%;
+    margin-right: 3%;
+}
+
+.name .name1 {
+    background-image: url(./images/name1.png);
+    width: 25%;
+}
+
+.name .name2 {
+    background-image: url(./images/name2.png);
+}
+
+.name .name3 {
+    background-image: url(./images/name3.png);
+}
+
+.name .name4 {
+    background-image: url(./images/name4.png);
+}
+
+.name .name5 {
+    background-image: url(./images/name5.png);
+    width: 25%;
+}
+
+.animate .name .name1 {
+    -webkit-animation: fadeIn 1s 10s linear both;
+}
+
+.animate .name .name2 {
+    -webkit-animation: fadeIn 1s 10s linear both;
+}
+
+.animate .name .name3 {
+    -webkit-animation: fadeIn 1s 10s linear both;
+}
+
+.animate .name .name4 {
+    -webkit-animation: fadeIn 1s 10s linear both;
+}
+
+.animate .name .name5 {
+    -webkit-animation: fadeIn 1s 10s linear both;
+}
+
+.monkey {
+    width: 50%;
+    height: 25%;
+    left: -5px;
+    bottom: -2%;
+    background-position: left bottom;
+    background-image: url(./images/monkey.png);
+}
+
+.animate .monkey {
+    -webkit-animation: fadeRightIn 1s 13s linear both;
+}
+
+@-webkit-keyframes fadeShake {
+    0% {
+        opacity: 1;
+        -webkit-transform: rotate(0deg)
+    }
+    4% {
+        opacity: 1;
+        -webkit-transform: rotate(5deg)
+    }
+    8% {
+        opacity: 1;
+        -webkit-transform: rotate(0deg)
+    }
+    12% {
+        opacity: 1;
+        -webkit-transform: rotate(-5deg)
+    }
+    16% {
+        opacity: 1;
+        -webkit-transform: rotate(0deg)
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: rotate(0deg)
+    }
+}
+
+.animate .monkey.mon {
+    -webkit-animation: fadeShake 3s ease-in-out infinite;
+}
